@@ -1,8 +1,7 @@
 /* eslint-disable react/display-name */
-import Head from "next/head";
 import { Stack } from "@mui/material";
-
-const withLayoutBasic = (Component: any) => {
+import Head from "next/head";
+const withLayoutMain = (Component: any) => {
   return (props: any) => {
     return (
       <>
@@ -10,7 +9,7 @@ const withLayoutBasic = (Component: any) => {
           <title>Nestar</title>
         </Head>
         <Stack id="pc-wrap">
-          <Stack sx={{ background: "#81c784" }}>Header Besit</Stack>
+          <Stack sx={{ background: "#81c784" }}>Header Home</Stack>
           <Stack id={"main"}>
             <Component {...props} />
           </Stack>
@@ -20,5 +19,4 @@ const withLayoutBasic = (Component: any) => {
     );
   };
 };
-
-export default withLayoutBasic;
+export default withLayoutMain;
